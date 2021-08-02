@@ -8,7 +8,6 @@
 		
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel = "stylesheet" href="./main.css">
 		
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
@@ -29,17 +28,55 @@
   			font-size: 20px;
 			}
 			
-			footer {
+			.footer {
 				text-align: center;
 				padding: 3px;
 				background-color: #000080;
 				color: white;
+			}
+			
+			.accordion{ 
+				width: 100%; /* change this to change the width of accordion button*/
+				background-color: whitesmoke; /* change this to change the background colour*/
+				text-align: left; /* change this to change the text alignment */
+				border: none; /* Border hidden */
+				padding: 15px 20px; /* change this to change the padding */
+				font-size: 18px; /* change this to change the font size */
+				cursor: pointer; /* cursor property pointer */
+				transition: background-color 0.2s linear; /* change this to change transition property or delay */
+
+			} 
+			
+			.accordion-content {
+				background-color: white; /* Change this to change background color of content */
+				border-left: 1px solid whitesmoke; /* Left side border width and colour */
+				border-right: 1px solid whitesmoke; /* Right side border width and colour */
+				padding: 0 20px; /* padding */
+				max-height: 0;
+				overflow: hidden; /* Overflow hidden */
+				transition: max-height 0.2s ease-in-out;
+
 			}
 
 
 			<!--Full Page Style Setting-->
 			.content {padding:20px;}
 		</style>
+		
+		<script>
+			const cwb = document.querySelectorAll(".accordion");
+			cwb.forEach((accordion) => {
+				accordion.onclick = function () {
+					this.classList.toggle("open");
+					let content = this.nextElementSibling;
+					if (content.style.maxHeight) {
+						content.style.maxHeight = null;
+					} else {
+						content.style.maxHeight = content.scrollHeight + "px";
+					}
+				};
+			});
+		</script> 
 	</head>
     
 
