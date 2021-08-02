@@ -35,48 +35,55 @@
 				color: white;
 			}
 			
-			.accordion{ 
-				width: 100%; /* change this to change the width of accordion button*/
-				background-color: whitesmoke; /* change this to change the background colour*/
-				text-align: left; /* change this to change the text alignment */
-				border: none; /* Border hidden */
-				padding: 15px 20px; /* change this to change the padding */
-				font-size: 18px; /* change this to change the font size */
-				cursor: pointer; /* cursor property pointer */
-				transition: background-color 0.2s linear; /* change this to change transition property or delay */
-
-			} 
-			
-			.accordion-content {
-				background-color: white; /* Change this to change background color of content */
-				border-left: 1px solid whitesmoke; /* Left side border width and colour */
-				border-right: 1px solid whitesmoke; /* Right side border width and colour */
-				padding: 0 20px; /* padding */
-				max-height: 0;
-				overflow: hidden; /* Overflow hidden */
-				transition: max-height 0.2s ease-in-out;
-
+			.accordion{
+				width: 100%;
+                    
+				background-color: whitesmoke;
+                    
+				text-align: left;
+                    
+				border: none;
+                   
+				padding: 15px 20px;
+                    
+				font-size: 18px;
+                    
+				cursor: pointer;
+                    
+				transition: background-color 0.2s linear;
+                    
 			}
-
+                    
+			.accordion:hover,.accordion:focus{
+                    
+				outline: none;
+                    
+				background-color: #ddd;
+                    	
+			}
+                    
+			.accordion-content {
+                    
+				background-color: white;
+                    
+				border-left: 1px solid whitesmoke;
+                    
+				border-right: 1px solid whitesmoke;
+                    
+				padding: 0 20px;
+                    
+				max-height: 0;
+                    
+				overflow: hidden;
+                    
+				transition: max-height 0.2s ease-in-out;
+                    
+			}
 
 			<!--Full Page Style Setting-->
 			.content {padding:20px;}
 		</style>
 		
-		<script>
-			const cwb = document.querySelectorAll(".accordion");
-			cwb.forEach((accordion) => {
-				accordion.onclick = function () {
-					this.classList.toggle("open");
-					let content = this.nextElementSibling;
-					if (content.style.maxHeight) {
-						content.style.maxHeight = null;
-					} else {
-						content.style.maxHeight = content.scrollHeight + "px";
-					}
-				};
-			});
-		</script> 
 	</head>
     
 
@@ -234,47 +241,41 @@
 		<br>
 		<br>
 		
-		<div class="accordion">
-  <div>
-    <input type="radio" name="example_accordion" id="section1" class="accordion__input">
-    <label for="section1" class="accordion__label">Section #1</label>
-    <div class="accordion__content">
-      <p>Section #1</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sit reiciendis, ipsam quaerat,
-        aperiam perspiciatis ad ullam architecto impedit natus illo nostrum molestias voluptas earum a
-        voluptatibus fugiat fuga facere!
-      </p>
-    </div>
-  </div>
-  <div>
-    <input type="radio" name="example_accordion" id="section2" class="accordion__input">
-    <label for="section2" class="accordion__label">Section #2</label>
-    <div class="accordion__content">
-      <p>Section #2</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sit reiciendis, ipsam quaerat,
-        aperiam perspiciatis ad ullam architecto impedit natus illo nostrum molestias voluptas earum a
-        voluptatibus fugiat fuga facere!
-      </p>
-    </div>
-  </div>
-  <div>
-    <input type="radio" name="example_accordion" id="section3" class="accordion__input">
-    <label for="section3" class="accordion__label">Section #3</label>
-    <div class="accordion__content">
-      <p>Section #3</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sit reiciendis, ipsam quaerat,
-        aperiam perspiciatis ad ullam architecto impedit natus illo nostrum molestias voluptas earum a
-        voluptatibus fugiat fuga facere!
-      </p>
-    </div>
-  </div>
-</div>
 		
-      
-        
+		<button class="accordion">1st Accordion</button>
+                <div class="accordion-content">
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque suscipit, necessitatibus fuga quae eaque est non omnis sed maxime eos. Nobis sunt unde fuga possimus perferendis, dolores aspernatur voluptatibus ducimus eos similique cupiditate et tempora sed expedita enim harum quidem esse excepturi ut assumenda nesciunt suscipit. Tempora, adipisci sapiente! Eaque. </p>
+                </div>
+                <button class="accordion">2nd Accordion</button>
+                <div class="accordion-content">
+                <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate molestias voluptates, facilis eius eligendi obcaecati commodi. Obcaecati, repellat veritatis modi libero error ut similique enim incidunt, perferendis dolorum id exercitationem, sunt ea voluptatibus laborum necessitatibus corporis autem deleniti dolores? Dignissimos amet reprehenderit voluptas recusandae quos? Corrupti laudantium vero facere inventore consequatur maxime iure, minima perferendis voluptatem. Quis voluptates omnis consequuntur. </p>
+                </div>
+                <button class="accordion">3rd Accordion</button>
+                <div class="accordion-content">
+                <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, incidunt a inventore vero sed delectus ipsam quos. Possimus, sequi accusamus animi vero pariatur aliquam illo repellendus laboriosam quidem mollitia omnis voluptas inventore, consequuntur perspiciatis illum hic ratione obcaecati minus sunt itaque excepturi commodi a quisquam cum! Rem consequatur nostrum, magnam facilis vitae ullam esse numquam, tenetur earum unde officiis et. Consequuntur error non provident delectus. </p>
+                </div>
+		
+		
+		
+		
+		<script>
+                    const cwb = document.querySelectorAll(".accordion");
+                    cwb.forEach((accordion) => {
+                    accordion.onclick = function () {
+                    this.classList.toggle("open");
+                    let content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                    };
+                    });
+                    </script>
+		
 	</body>
 
 
