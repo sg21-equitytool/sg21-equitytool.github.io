@@ -79,8 +79,9 @@
 		<center>
       			<!--Secondary header-->
 			<h2>Federal Investments and Outcome Area Statistics by County</h2> 
+		</center>
       
-		
+		<center>
 			<!-- Tableau Embed --> 
 			<div class='tableauPlaceholder' id='viz1626967962529' style='position: relative'>
 				<noscript>
@@ -115,6 +116,31 @@
 			
       
 		</center>
+		
+		
+		
+		
+		<button class="accordion">Environment</button>
+                <div class="accordion-content">
+                <p>
+			
+			Environement Metrics
+                </div>
+                <button class="accordion">Healthcare</button>
+                <div class="accordion-content">
+                <p>
+			Healthcare Metrics
+			
+                </div>
+                <button class="accordion">Crime</button>
+                <div class="accordion-content">
+                <p>
+			Criminal Justice Metrics
+                </div>
+		
+		
+		
+		
 		<br>
 		<center>
 			<!-- Investment Data Table -->
@@ -225,30 +251,17 @@
 		<br>
 		
 		
-		<button class="accordion">Environment</button>
-                <div class="accordion-content">
-                <p>
-			
-			Environement Metrics
-                </div>
-                <button class="accordion">Healthcare</button>
-                <div class="accordion-content">
-                <p>
-			Healthcare Metrics
-			
-                </div>
-                <button class="accordion">Crime</button>
-                <div class="accordion-content">
-                <p>
-			Criminal Justice Metrics
-                </div>
+		
+		
 		
 		
 		
 		
 		<script>
-                    const cwb = document.querySelectorAll(".accordion");
-                    cwb.forEach((accordion) => {
+                    
+			const cwb = document.querySelectorAll(".accordion");
+                    
+			cwb.forEach((accordion) => {
                     accordion.onclick = function () {
                     this.classList.toggle("open");
                     let content = this.nextElementSibling;
