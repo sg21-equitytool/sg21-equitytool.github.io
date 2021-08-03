@@ -55,13 +55,17 @@
 			}
                     
 			.accordion-content {
+				display: flex;               
+				justify-content: space-between; 
+				margin:5px auto;
 				background-color: white;
-				border-left: 1px solid whitesmoke;
-				border-right: 1px solid whitesmoke;
-				padding: 0 20px;
-				max-height: 0;
-				overflow: hidden;
-				transition: max-height 0.2s ease-in-out;
+				width: 20%;
+				text-align: center;
+				border-left: none;
+				border-right: none;   
+				max-height: 0;       
+				overflow: hidden;    
+				transition: max-height 0.2s ease-in-out;  
 			}
 			
 			.content {padding:20px;}
@@ -118,15 +122,22 @@
 		</center>
 		
 		
+		<br>
+		<br>
 		
 		
 		<button class="accordion">Environment</button>
-                <div class="accordion-content">
-                <p>
+                
+		<div class="accordion-content">
+                
+			<p>
 			
-			Environement Metrics
-                </div>
-                <button class="accordion">Healthcare</button>
+			
+				Environement Metrics
+                
+		</div>
+                
+		<button class="accordion">Healthcare</button>
                 <div class="accordion-content">
                 <p>
 			Healthcare Metrics
